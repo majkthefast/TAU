@@ -55,7 +55,7 @@ class GameBoard:
             self.start = (current_row, current_col)
             return True
         else:
-            print("Niemożliwy ruch! Wybierz inny kierunek.")
+            print("Niemożliwy ruch!")
             return False
 
 # Przykładowe użycie
