@@ -21,18 +21,18 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r $GITHUB_WORKSPACE/TAU/TAU3/requirements.txt || true
+        pip install -r TAU/TAU3/requirements.txt || true
 
     - name: Display Initial Board
-      run: python $GITHUB_WORKSPACE/TAU/TAU3/main.py display
+      run: python TAU/TAU3/main.py display
 
     - name: Move in Different Directions
       run: |
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py move right
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py display
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py move down
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py display
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py move left
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py display
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py move up
-        python $GITHUB_WORKSPACE/TAU/TAU3/main.py display
+        python TAU/TAU3/main.py move right
+        python TAU/TAU3/main.py display
+        python TAU/TAU3/main.py move down
+        python TAU/TAU3/main.py display
+        python TAU/TAU3/main.py move left
+        python TAU/TAU3/main.py display
+        python TAU/TAU3/main.py move up
+        python TAU/TAU3/main.py display
