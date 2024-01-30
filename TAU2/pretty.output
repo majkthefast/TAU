@@ -1,0 +1,36 @@
+Feature: GitHub Login # features/github_login.feature:1
+
+  Scenario: Attempt to login with invalid credentials  # features/github_login.feature:3
+    Given I navigate to the GitHub login page          # features/steps/github_login_steps.py:8
+      Traceback (most recent call last):
+        File "C:\Python311\Lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "C:\Python311\Lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\github_login_steps.py", line 10, in step_impl
+          context.driver.get('https://github.com/login')
+          ^^^^^^^^^^^^^^
+        File "C:\Python311\Lib\site-packages\behave\runner.py", line 321, in __getattr__
+          raise AttributeError(msg)
+      AttributeError: 'Context' object has no attribute 'driver'
+
+    When I enter invalid credentials                   # None
+    Then I should see an error message                 # None
+
+  Scenario: Login with valid credentials      # features/github_login.feature:8
+    Given I navigate to the GitHub login page # features/steps/github_login_steps.py:8
+      Traceback (most recent call last):
+        File "C:\Python311\Lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "C:\Python311\Lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\github_login_steps.py", line 10, in step_impl
+          context.driver.get('https://github.com/login')
+          ^^^^^^^^^^^^^^
+        File "C:\Python311\Lib\site-packages\behave\runner.py", line 321, in __getattr__
+          raise AttributeError(msg)
+      AttributeError: 'Context' object has no attribute 'driver'
+
+    When I enter valid credentials            # None
+    Then I should be successfully logged in   # None
+
